@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title><span>New Post</span></mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)='onSubmit(form)' #form='ngForm'>
+      <div fxLayout='column' fxLayoutAlign='center center' fxLayoutGap='15px'>
+        <video #video autoplay></video>
+        <canvas #canvas width="320" height="140" style="display: none;margin-bottom: 10px;"></canvas>
+        <div #pickImage class='pick-image'>
+          <span class="mat-subtitle">Pick an Image instead!</span>
+          <input type="file" accept="image/*" name='image' (change)='onImageSelect($event)' [(ngModel)]='inputFileImage'>
+        </div>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Title" name='title' ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Location" name='location' [(ngModel)]='location' required>
+        </mat-form-field>
+        <button mat-button type="button" (click)='onGetLocation()'>Get Location</button>
+        <button mat-raised-button color='primary' type="submit" [disabled]='form.invalid'>Capture</button>
+        <button class='close-btn' mat-icon-button mat-raised-button routerLink='/'>
+          <mat-icon [inline]='true'>close</mat-icon>
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

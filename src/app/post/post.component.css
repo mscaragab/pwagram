@@ -1,0 +1,46 @@
+mat-card-title {
+  text-align: center;
+}
+
+.close-btn {
+  margin-top: 15px;
+  width: 48px;
+  height: 48px;
+}
+
+.pick-image {
+  text-align: center;
+  display: none;
+}
+
+.pick-image span {
+  display: block;
+  margin: 10px;
+  font-size: medium;
+}
+
+@media (min-width: 600px) {
+  mat-card {
+    width: 700px;
+    margin: 15px auto;
+  }
+  mat-form-field {
+    width: 600px;
+  }
+  video, canvas {
+    width: 700px;
+  }
+}
+
+@media (max-width: 599px) {
+  mat-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  mat-form-field {
+    width: 80%;
+  }
+  video, canvas {
+    width: 100%;
+  }
+}

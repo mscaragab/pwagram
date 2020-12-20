@@ -1,0 +1,13 @@
+<img class="main-img" src='../assets/images/main.jpg'>
+<span class="mat-title">Share your Moments</span>
+<div fxLayout='column' fxLayout.gt-xs='row wrap'>
+  <mat-card fxFlex='100' fxFlex.gt-xs='400px' *ngFor='let post of posts'>
+    <mat-card-title>{{ post.title }}</mat-card-title>
+    <img mat-card-image [src]='post.image'>
+    <mat-card-content>{{ post.location}}</mat-card-content>
+  </mat-card>
+</div>
+
+<button class="add-button" routerLink='/post' color='accent' mat-icon-button mat-raised-button>
+  <mat-icon [inline]='true'>add</mat-icon>
+</button>
