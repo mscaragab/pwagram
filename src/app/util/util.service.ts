@@ -11,7 +11,7 @@ export class UtilService {
   enableNotifications() {
     if ('serviceWorker' in navigator) {
       Notification.requestPermission((result) => {
-        console.log('User Choice', result);
+        // console.log('User Choice', result);
         if (result === 'granted') {
           navigator.serviceWorker.ready.then((sw) => {
             sw.pushManager.getSubscription().then((sub) => {
@@ -75,15 +75,15 @@ export class UtilService {
   showNotification(title: string, content: string, image: string) {
     if ('serviceWorker' in navigator) {
       Notification.requestPermission((result) => {
-        console.log('User Choice', result);
+        // console.log('User Choice', result);
         if (result === 'granted') {
           var options = {
-            body: 'New Post: ' + title,
+            body: title,
             icon: '/assets/icons/icon-256.png',
             image: image,
             lang: 'en-US', // BCP 47,
             vibrate: [100, 50, 200],
-            badge: '/assets/images/post-25.png',
+            badge: '/assets/icons/icon-96.png',
             tag: 'new-post',
             renotify: true,
             actions: [

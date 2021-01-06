@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:active,
+a.active {
+  color: #5387fb;
+}

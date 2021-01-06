@@ -14,6 +14,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PostComponent } from './post/post.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OfflineComponent } from './offline/offline.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     HelpComponent,
     NotFoundComponent,
     PostComponent,
+    OfflineComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],

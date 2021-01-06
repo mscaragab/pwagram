@@ -1,12 +1,13 @@
 .add-button {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
+  font-size: 24px;
 }
 
 .mat-title {
   display: block;
   text-align: center;
-  color: blue;
+  color: #1d52b2;
   margin-top: 15px;
 }
 
@@ -48,7 +49,7 @@
   }
   .add-button {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 20px;
   }
 }
